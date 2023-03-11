@@ -8,6 +8,8 @@ import store from './redux/store';
 
 import { ThemeProvider } from '@mui/material';
 import theme from './themeConfig'
+import axios from 'axios'
+axios.defaults.baseURL = 'http://localhost:3001/'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

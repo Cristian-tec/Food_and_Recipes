@@ -42,7 +42,7 @@ export default function Recipe2(props) {
         //meter la action que me trae esos datos
 
         setShow(true)
-        let detail1 = await axios((`http://localhost:3001/recipes/${props.id}`));
+        let detail1 = await axios((`/recipes/${props.id}`));
         setDetail(detail1.data)
         // console.log(detail1);        
         /* navigate(`/recipedetail/${props.id}`) */

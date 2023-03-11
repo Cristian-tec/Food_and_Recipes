@@ -23,7 +23,7 @@ export const searchRecipes = (recipe) => {
     try {
         return async function (dispatch) {
             dispatch(startLoading())
-            let res = await axios(`http://localhost:3001/recipes?title=${recipe}`);
+            let res = await axios(`/recipes?title=${recipe}`);
             dispatch({
                 type: SEARCH_RECIPES,
                 payload: res.data
@@ -43,7 +43,7 @@ export const searchRecipes = (recipe) => {
 export const createRecipe = (input) => {
     //console.log(input);
     return async function () {
-        await axios.post('http://localhost:3001/recipes', input)
+        await axios.post('/recipes', input)
     }
 }
 
@@ -58,7 +58,7 @@ export const createRecipe = (input) => {
 export const getRecipeDetail = (id) => {
     /*     console.log(id + 'ACTION'); */
     return async function (dispatch) {
-        await fetch(`http://localhost:3001/recipes/${id}`)
+        await fetch(`/recipes/${id}`)
             .then(response => response.json())
             .then(data => dispatch({ type: GET_RECIPE_DETAIL, payload: data }))
     }
@@ -95,7 +95,7 @@ export const deleteRecipe = (id) => {
     console.log(id);
     return async function (dispatch) {
         dispatch(startLoading())
-        await axios.delete(`http://localhost:3001/recipes/${id}`)
+        await axios.delete(`/recipes/${id}`)
             .then(response => dispatch({ type: DELETE_RECIPE, payload: response.data }))
         dispatch(finishLoading())
     }
