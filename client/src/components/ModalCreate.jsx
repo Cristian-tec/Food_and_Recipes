@@ -223,7 +223,7 @@ export default function ModalCreate({ closeModalCreate, update }) {
         //console.log(input);
         //dispatch(createRecipe(input))  //bver como acceder a los datos de crete recipe
 
-        const created = await axios.post('http://localhost:3001/recipes', input)
+        const created = await axios.post('/recipes', input)
         if (created.data.title) {
             dispatch(searchRecipes(''));
           
