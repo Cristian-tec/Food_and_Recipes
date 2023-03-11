@@ -19,12 +19,14 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-const {createDiets} = require('./src/controllers/controllers')
+const { createDiets } = require('./src/controllers/controllers')
+require('dotenv').config();
+const { PORT } = process.env;
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(3001, () => {
+  server.listen(process.env.PORT, () => {
     createDiets();
-    console.log('%s API Food listening at 3001'); // eslint-disable-line no-console
+    console.log('%s API Food listening at ', process.env.PORT); // eslint-disable-line no-console
   });
 });
