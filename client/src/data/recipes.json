@@ -1,0 +1,31 @@
+{
+    "results": [
+        {
+            "healthScore": "Loading...",
+            "id": 0,
+            "title": "Loading...",
+            "image": "https://retchhh.files.wordpress.com/2015/03/loading10.gif",
+            "summary": "Loading...",
+            "diets": []
+        },
+        {
+            "healthScore": "Loading...",
+            "id": 0,
+            "title": "Loading...",
+            "image": "https://retchhh.files.wordpress.com/2015/03/loading10.gif",
+            "summary": "Loading...",
+            "diets": []
+        },
+        {
+            "healthScore": "Loading...",
+            "id": 0,
+            "title": "Loading...",
+            "image": "https://retchhh.files.wordpress.com/2015/03/loading10.gif",
+            "summary": "Loading...",
+            "diets": []
+        }
+    ],
+    "offset": 0,
+    "number": 10,
+    "totalResults": 5221
+}
