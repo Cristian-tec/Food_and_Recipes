@@ -8,8 +8,9 @@ import store from './redux/store';
 
 import { ThemeProvider } from '@mui/material';
 import theme from './themeConfig'
-import axios from 'axios'
-axios.defaults.baseURL = 'http://localhost:3001/'
+import axios from 'axios'   
+//axios.defaults.baseURL = 'http://localhost:3001/'
+axios.defaults.baseURL = 'https://foodandrecipes-production.up.railway.app/'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
