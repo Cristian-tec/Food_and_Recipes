@@ -25,8 +25,8 @@ const { PORT } = process.env;
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(process.env.DB_PORT, () => {
+  server.listen(process.env.PORT, () => {
     createDiets();
-    console.log('%s API Food listening at ', process.env.DB_PORT); // eslint-disable-line no-console
+    console.log('%s API Food listening at ', process.env.PORT); // eslint-disable-line no-console
   });
 });
