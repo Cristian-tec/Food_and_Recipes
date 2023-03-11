@@ -105,7 +105,7 @@ export default function Recipe2(props) {
                     onClose={handleClose}
                     aria-labelledby="alert-dialog-title"
                     aria-describedby="alert-dialog-description"
-                    sx={{ width: 500, height: 'auto', margin: 'auto' }}
+                    sx={{ width: 'auto', height: 'auto', margin: 'auto' }}
                 >
                     <DialogTitle id="alert-dialog-title">
                         {"Are you sure you want to delete the recipe Name: " + props.title}

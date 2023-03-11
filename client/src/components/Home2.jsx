@@ -10,6 +10,11 @@ import Navbar from './Navbar'
 import Paginado from './Paginado2'
 import loading4 from '../img/cargando4.gif'
 
+import {
+    Card,
+    ImageListItem,
+} from '@mui/material';
+
 export default function Home2() {
 
     //const allRecipes = useSelector((state) => state.recipes); 
@@ -76,9 +81,11 @@ export default function Home2() {
     const dataDisplay = () => {
         if (display) {
             return (
-                <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <img src={loading4} alt='1' width={826} height={620}></img>
-                </Box>
+                < Card >
+                    <ImageListItem sx={{ height: '100% !important' }}>
+                        <img src={loading4} alt='1'></img>
+                    </ImageListItem>
+                </Card >
             )
         } else {
             return (
