@@ -81,11 +81,13 @@ export default function Home2() {
     const dataDisplay = () => {
         if (display) {
             return (
-                < Card >
-                    <ImageListItem sx={{ height: '100% !important' }}>
-                        <img src={loading4} alt='1'></img>
-                    </ImageListItem>
-                </Card >
+                <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
+                    < Card >
+                        <ImageListItem sx={{ height: '100% !important' }}>
+                            <img src={loading4} alt='1'></img>
+                        </ImageListItem>
+                    </Card >
+                </Grid >
             )
         } else {
             return (
